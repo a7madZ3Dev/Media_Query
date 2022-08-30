@@ -13,7 +13,6 @@ class SizeConfig {
   static late double safeBlockVertical;
   static late double safeBlockVerticalWithAppBar;
   static late double safeBlockVerticalWithOutAppBar;
-  static late double allAppHaveAppBar;
   static late bool isPortrait;
   static late bool isLandscape;
 
@@ -34,15 +33,13 @@ class SizeConfig {
 
     safeBlockVertical = (screenHeight - safeAreaVertical) / 100;
 
-    /// you need to divedied py 100  to use ===> (safeBlockVerticalWithAppBar/100)
+    /// you need to divided py 100  to use ===> (safeBlockVerticalWithAppBar/100)
 
-    safeBlockVerticalWithAppBar = (screenHeight - safeAreaVertical - AppBar().preferredSize.height) / 100;
+    safeBlockVerticalWithAppBar =
+        (screenHeight - safeAreaVertical - AppBar().preferredSize.height) / 100;
 
-    safeBlockVerticalWithOutAppBar = (screenHeight - safeAreaVertical - 0) / 100;
-
-    /// if all app have appbar you can use this propirty
-   
-    allAppHaveAppBar = (screenHeight - safeAreaVertical - AppBar().preferredSize.height) / 100;
+    safeBlockVerticalWithOutAppBar =
+        (screenHeight - safeAreaVertical - 0) / 100;
 
     isPortrait = context.portrait;
 
@@ -50,12 +47,13 @@ class SizeConfig {
 
     print('screenWidth =>>> $screenWidth -  $blockSizeHorizontal');
     print('screenHeight =>>> $screenHeight  -  $blockSizeVertical');
-    print('_safeAreaHorizontal =>>> $safeAreaHorizontal');
-    print('safeAreaVertical =>>> $safeAreaVertical');
     print('padding top =>>> ${context.padding.top}');
     print('padding bottom =>>> ${context.padding.bottom}');
+    print('safeAreaVertical =>>> $safeAreaVertical');
+    print('safeAreaHorizontal =>>> $safeAreaHorizontal');
     print('AppBar height =>>>  ${AppBar().preferredSize.height}');
-    print('safeBlockVerticalWithOutAppBar  =>>> $safeBlockVerticalWithOutAppBar');
+    print(
+        'safeBlockVerticalWithOutAppBar  =>>> $safeBlockVerticalWithOutAppBar');
     print('safeBlockVerticalWithAppBar =>>>  $safeBlockVerticalWithAppBar');
     print('Screen is portrait =>>>  $isPortrait');
     print('Screen is landscape =>>>  $isLandscape');
