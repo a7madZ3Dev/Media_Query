@@ -1,4 +1,4 @@
-## Size Config
+## Media_Query
 
 A new Flutter project. used To achieve a responsive screen with all sizes,
 a straightforward class is utilized to regulate screen sizes.
@@ -20,3 +20,7 @@ You can also follow my GitHub Profile to stay updated about my latest projects:
 If you liked the repo then kindly support it by giving it a star ⭐!
 
 Copyright (c) 2023 Ahmad Alzoabi
+
+## Visitors Count
+
+<img align="left" src = "https://profile-counter.glitch.me/Media_Query/count.svg" alt ="Loading">
